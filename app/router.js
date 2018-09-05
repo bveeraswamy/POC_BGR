@@ -7,6 +7,10 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-});
+  this.route('blog', {path : '/myblog'}, function() {
+    this.route('author');
+    this.route('edit');
+  });
+}); 
 
 export default Router;
